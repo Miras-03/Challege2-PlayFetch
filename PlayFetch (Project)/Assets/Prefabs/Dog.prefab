@@ -5327,7 +5327,7 @@ GameObject:
   - component: {fileID: 8241448880400496855}
   - component: {fileID: 8241448879431697764}
   - component: {fileID: 8241448879431697766}
-  - component: {fileID: 353968393887968187}
+  - component: {fileID: -5298753003147437216}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Dog
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba24ec01e08d4e8596c800afced39e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &353968393887968187
+--- !u!114 &-5298753003147437216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5450,7 +5450,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8241448880393145375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd56477307ae34a53ab47afc77a08392, type: 3}
+  m_Script: {fileID: 11500000, guid: f8639c98d3b9e5d4bbcfcabb3fc8f912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8241448880393145945

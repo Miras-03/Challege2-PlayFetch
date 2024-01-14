@@ -572,6 +572,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768187719}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &808175681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808175682}
+  m_Layer: 0
+  m_Name: Spawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &808175682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808175681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1007274691}
+  - {fileID: 1899805272}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007274690
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +616,7 @@ GameObject:
   - component: {fileID: 1007274691}
   - component: {fileID: 1007274693}
   m_Layer: 0
-  m_Name: Spawn Manager
+  m_Name: BallSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,12 +630,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007274690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 808175682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1007274693
 MonoBehaviour:
@@ -616,10 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745c25f6adc3b4804961d8389a1a74fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefabs:
-  - {fileID: 2178073922435996831, guid: 1d143480adadf43389395930eee2b5cf, type: 3}
-  - {fileID: 4524317531697499686, guid: a325bcb65fd94414191d0ddc2514e2dc, type: 3}
-  - {fileID: 7945815000853930379, guid: fc41e6839a5494e0cbaea5f0081c271d, type: 3}
+  ball: {fileID: -6781764841582309150, guid: 1d143480adadf43389395930eee2b5cf, type: 3}
 --- !u!1 &1590138454
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +767,51 @@ Transform:
   - {fileID: 455978624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899805271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899805272}
+  - component: {fileID: 1899805273}
+  m_Layer: 0
+  m_Name: DogSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1899805272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899805271}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 808175682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1899805273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899805271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af571dd4e8bd4b8408280c3de5fdc4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogPrefab: {fileID: -5298753003147437216, guid: 3e5fe95e580114a5f8f8348678e77463, type: 3}
 --- !u!1001 &5139560941782731100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,6 +820,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1848117871233931590, guid: f35f7edb243ea0b43bbd5170ad9af1d1, type: 3}
+      propertyPath: dogPrefab
+      value: 
+      objectReference: {fileID: -5298753003147437216, guid: 3e5fe95e580114a5f8f8348678e77463, type: 3}
+    - target: {fileID: 1848117871233931590, guid: f35f7edb243ea0b43bbd5170ad9af1d1, type: 3}
+      propertyPath: dogSpawner
+      value: 
+      objectReference: {fileID: 1899805273}
     - target: {fileID: 4656287521553436954, guid: f35f7edb243ea0b43bbd5170ad9af1d1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -800,5 +883,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 668008589}
   - {fileID: 1839596420}
-  - {fileID: 1007274691}
   - {fileID: 5139560941782731100}
+  - {fileID: 808175682}

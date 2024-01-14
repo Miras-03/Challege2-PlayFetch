@@ -1,20 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public sealed class OutOfBoundDestroy : MonoBehaviour
+public sealed class Ball : MonoBehaviour
 {
-    private const int leftBound = -50;
+    private Action<Ball> OnRelease;
     private const int downBound = -3;
+
+    public void Init(Action<Ball> OnRelease) => this.OnRelease = OnRelease;
 
     private void FixedUpdate() => CheckOrDestroy();
 
     private void CheckOrDestroy()
     {
         Vector3 currentPos = transform.position;
-        if (currentPos.x < leftBound)
-            Destroy(gameObject);
-        else if (currentPos.y < downBound)
+        if (currentPos.y < downBound)
         {
-            Destroy(gameObject);
+            OnRelease(this);
             TerminateGame();
         }
     }
